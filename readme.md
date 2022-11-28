@@ -3,9 +3,9 @@
 1. Run `python3 main.py <your image file> | split -l 30000 -d <file name prefix>` somewhere, require opencv-python.  
    It will generate a macro of controller key serial from your picture.  
    运行`main.py`, 这会从图片生成手柄按键序列  
-2. Run `sudo pip3 install nxbt` on your Raspberry Pi.  
+2. Run `sudo pip3 install nxbt` on your Raspberry Pi. Other Linux should be ok but I have not tested.  
    See [nxbt](https://github.com/Brikwerk/nxbt), it can simulate your Raspberry Pi as a Pro controller.  
-   安装`nxbt`用于将树莓派模拟成Pro手柄  
+   安装`nxbt`用于将树莓派模拟成Pro手柄, 应该是个Linux都行, 但是我没试过  
 3. Enter drawing interface in game, move the curser to left-top, select the smallest brush.  
    在游戏中进入绘图, 将光标移到左上角, 选择最小的笔刷  
 4. Run `sudo python3 ctrl.py <file gengrated by main.py>` in sequence to run the macro.  
@@ -23,4 +23,3 @@ and then replace `A` to `B` in the macro generated with the inversed picture to 
 You'd better disconnect all of your real controller before running `nxbt`.  
 In this case, you can use the touchscreen to move the cursor and select brush.  
 你最好在运行nxbt前断开所有其他手柄连接,此时你可以使用触摸屏来选择笔刷与移动光标  
-
